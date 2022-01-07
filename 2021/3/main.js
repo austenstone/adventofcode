@@ -35,3 +35,4 @@ for (let i = 0; i < data[0].length; i++) {
 
     console.log(data);
 }
+

@@ -19,6 +19,19 @@ numbers.forEach((num) => {
     gr = parseInt(gammaRate, 2);
     er = parseInt(epsilonRate, 2);
     pr = er * gr;
-    console.log(`zeros: ${zeros}, ones ${ones}, ${gr}(gammaRate) * ${er}(epsilonRate) = ${pr}`);
 })
 
+console.log(`${gr}(gammaRate) * ${er}(epsilonRate) = ${pr}`);
+
+for (let i = 0; i < data[0].length; i++) {
+    data.forEach((line, i) => {
+        let linearr = line.split('');
+        let char = linearr.shift();
+        line = linearr.join('');
+        if (char === '1') {
+            data.splice(i, 1);
+        }
+    })
+
+    console.log(data);
+}
